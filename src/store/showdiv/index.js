@@ -5,7 +5,6 @@ export default {
   mutations: {
     switch_show: function (state) {
       state.show += 1
-      console.log(state.show)
     }
   },
   actions: {
