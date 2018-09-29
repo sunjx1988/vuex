@@ -3,13 +3,19 @@ export default {
     show: 1
   },
   mutations: {
-    switch_show: function (state) {
+    add: function (state) {
       state.show += 1
+    },
+    sub: function (state) {
+      state.show -= 1
     }
   },
   actions: {
-    switch_show: function (context) {
-      context.commit('switch_show')
+    add: function (context) {
+      context.commit('add')
+    },
+    sub: function (context) {
+      context.commit('sub')
     }
   }
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <show-div />
+    <show-div type="add"/>
 
-    <show-div />
+    <show-div type="sub" />
   </div>
 </template>
 

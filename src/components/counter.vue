@@ -1,13 +1,13 @@
 <template>
   <div>
-    {{word}}
+    {{type}}计数器 => {{word}}
   </div>
 </template>
 
 <script>
 export default {
   name: 'counter',
-  props: ['word']
+  props: ['word', 'type']
 }
 </script>
 

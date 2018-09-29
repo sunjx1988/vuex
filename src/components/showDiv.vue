@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a href="javascript:;" @click="onshow">点击</a>
-    <counter :word="show" />
+    <a href="javascript:;" @click="doclick">点击</a>
+    <counter :word="show" :type="type" />
   </div>
 </template>
 
@@ -10,6 +10,7 @@ import counter from './counter'
 import {mapState} from 'vuex'
 export default {
   name: 'show-div',
+  props: ['type'],
   components: {
     counter
   },
@@ -19,8 +20,12 @@ export default {
     }
   },
   methods: {
-    onshow () {
-      this.$store.dispatch('switch_show')
+    doclick () {
+      if (this.type === 'add') {
+        this.$store.dispatch('add')
+      } else {
+        this.$store.dispatch('sub')
+      }
     }
   },
   computed: {
